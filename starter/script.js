@@ -4,14 +4,13 @@
 document.querySelector('.message').textContent = "🎉 Correct Number";
 document.querySelector('.number').textContent = 13;
 document.querySelector('.score').textContent = 10;
-const guessValue = Number(document.querySelector('.guess').value);
 const buttonEl = document.querySelector('.check');
 buttonEl.addEventListener('click',function(){
     console.log('button clicked');
-    // console.log(guessValue.value);
-    console.log(guessValue);
+    const guess = Number(document.querySelector('.guess').value);
+    console.log(guess, typeof guess);
   // document.querySelector('.message').textContent = '🎉 Correct Number';
-    console.log(typeof guessValue);//since guessValue is a string we need to convert this into a number so wrap it into the Number function.
-
+   /*  console.log(guessValue,typeof guessValue); *///since guessValue is a string we need to convert this into a number so wrap it into the Number function.
+  //Implemement the game logic
 
 });
