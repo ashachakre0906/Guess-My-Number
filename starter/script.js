@@ -5,7 +5,6 @@
 document.querySelector('.score').textContent = 10;
 const buttonEl = document.querySelector('.check');
 const secretNumber = Math.trunc(Math.random() * 20) + 1;
-document.querySelector('.number').textContent = secretNumber;
 console.log(secretNumber);
 buttonEl.addEventListener('click', function () {
   console.log('button clicked');
@@ -19,9 +18,12 @@ buttonEl.addEventListener('click', function () {
   if (!guess) {
     console.log('Please enter a guess value'); //0 is falsy value
       document.querySelector('.message').textContent = 'Please enter the number';
-    // When guess is equal to the secret value
+    // When the player wins
   } else if (guess === secretNumber) {
-    document.querySelector('.message').textContent = '🎉 Correct Number';
+      document.querySelector('.message').textContent = '🎉 Correct Number';
+      document.querySelector('.number').textContent = secretNumber;
+      document.body.style.backgroundColor = 'green';
+      document.body.style.backgroundColor = '30rem';
     //When guess is too high
   } else if (guess > secretNumber) {
     console.log(guess > secretNumber);
