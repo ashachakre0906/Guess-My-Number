@@ -15,16 +15,19 @@ buttonEl.addEventListener('click', function () {
   /*  console.log(guessValue,typeof guessValue); */ //since guessValue is a string we need to convert this into a number so wrap it into the Number function.
   //Implemement the game logic
   //Check if there is no input value
+    //When there is no input
   if (!guess) {
     console.log('Please enter a guess value'); //0 is falsy value
-    document.querySelector('.message').textContent = 'Please enter the number';
+      document.querySelector('.message').textContent = 'Please enter the number';
+    // When guess is equal to the secret value
   } else if (guess === secretNumber) {
     document.querySelector('.message').textContent = '🎉 Correct Number';
-  } else if (guess !== secretNumber) {
-    document.querySelector('.message').textContent = 'sorry, try again ☹️';
+    //When guess is too high
   } else if (guess > secretNumber) {
     console.log(guess > secretNumber);
-    console.log('hello');
-    document.querySelector('.message').textContent = 'hey';
+      document.querySelector('.message').textContent = '📈Too high';
+    // When guess is too low
+  } else if (guess < secretNumber) {
+      document.querySelector('.message').textContent = '📉Too low';
   }
 });
