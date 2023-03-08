@@ -6,6 +6,9 @@
 const buttonEl = document.querySelector(".check");
 let secretNumber = Math.trunc(Math.random() * 20) + 1;
 let score = 20;
+let highScore = 0;
+// document.querySelector(".highscore").textContent = highscore;
+
 // console.log(secretNumber);
 buttonEl.addEventListener("click", function () {
   console.log("button clicked");
@@ -27,6 +30,10 @@ buttonEl.addEventListener("click", function () {
        document.querySelector(".number").textContent = secretNumber;
        document.body.style.backgroundColor = "green";
        document.querySelector('.number').style.backgroundColor = "30rem";
+       if (score > highScore) {
+         highScore = score;
+         document.querySelector(".highscore").textContent = highScore;
+       }
        //When guess is too high
      } else if (guess > secretNumber) {
        if (score > 1) {
@@ -59,12 +66,12 @@ const againBtn = document.querySelector(".again");
 againBtn.addEventListener('click', function () {
   //Anonymous handler function doesnt have any name
   console.log("again button clicked");
-  let score = 20;
-  let secretNumber = Math.trunc(Math.random() * 20) + 1;
+  score = 20;
+  secretNumber = Math.trunc(Math.random() * 20) + 1;
   document.querySelector(".message").textContent = "Start guessing ....";
   document.querySelector(".number").textContent = '?';
   document.querySelector(".score").textContent = score;
-  document.querySelector('.guess').textContent = '';
+  document.querySelector('.guess').value = '';
   document.body.style.backgroundColor = "#555";
   document.querySelector(".number").style.backgroundColor = "15rem";
 });
