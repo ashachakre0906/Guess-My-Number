@@ -1,4 +1,5 @@
 ## Title of the project
+
 Guessing my number!
 
 ## Decsription of the project
@@ -14,27 +15,28 @@ Guessing my secret number is a user-friendly/fun game.This application is build 
 
 ```
 AS a user I want to play this FUN game
-SO THAT I can guess the secret number 
+SO THAT I can guess the secret number
 ```
 
 ## Acceptance Criteria
 
 ```
-<!-- GIVEN I need a new, secure password -->
-<!-- WHEN I click the button to generate a password -->
-<!-- THEN I am presented with a series of prompts for password criteria -->
-<!-- WHEN prompted for password criteria -->
-<!-- THEN I select which criteria to include in the password -->
-<!-- WHEN prompted for the length of the password -->
-<!-- THEN I choose a length of at least 8 characters and no more than 128 characters -->
-<!-- WHEN asked for character types to include in the password -->
-<!-- THEN I confirm whether or not to include lowercase, uppercase, numeric, and/or special characters -->
-<!-- WHEN I answer each prompt -->
-<!-- THEN my input should be validated and at least one character type should be selected -->
-<!-- WHEN all prompts are answered -->
-<!-- THEN a password is generated that matches the selected criteria -->
-<!-- WHEN the password is generated -->
-<!-- THEN the password is either displayed in an alert or written to the page -->
+When I click the check button to enter the guessed number
+Then the message appears on the screen "Please enter the number"
+When the user's guess is higher than the secret number
+Then the message appears on the screen "Too high"
+When the user's guess is lower than the secret number
+Then the message appears on the screen "Too low"
+When the user's guess is similar to the secret number
+Then the message appears on the screen "Winner" and background color changes to green
+When the score is '0'
+Then the message appears on the screen "You lost the game" and background color changes to red.
+When the guess is wrong each time
+Then the score should be deducted by 1
+When user play game each time
+Then the highscore should be updated
+When user clicks on again button
+Then initial values of number and score ,initial conditions of the message, number,score and guess input field should be restored.
 ```
 
 ## Built with
@@ -43,16 +45,10 @@ SO THAT I can guess the secret number
 - CSS
 - Javascript
 
-## What I learned
-
 ### Useful resources
 
 - [w3schools](https://www.w3schools.com/js/default.asp)
 - [MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions)
-
-## Author
-
-Starter code given by UC Berkely Extension
 
 ## License
 

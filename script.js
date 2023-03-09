@@ -29,8 +29,8 @@ buttonEl.addEventListener("click", function () {
         "Please enter the number"; */
       // When the player wins
     } else if (guess === secretNumber) {
-      // document.querySelector(".message").textContent = "🎉 Correct Number";
-      displayMessage("🎉 Correct Number");
+      // document.querySelector(".message").textContent = "🎉 WINNER!";
+      displayMessage("🎉 Winner");
       document.querySelector(".number").textContent = secretNumber;
       document.body.style.backgroundColor = "green";
       document.querySelector(".number").style.backgroundColor = "30rem";
